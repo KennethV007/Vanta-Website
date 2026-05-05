@@ -23,8 +23,8 @@ export default function Logo({
         className=""
       />
       {withWordmark && (
-        <span className="font-display text-[15px] font-semibold tracking-tight text-ink-50">
-          Vanta<span className="text-accent-400"> Solutions</span>
+        <span className="font-display text-[15px] font-semibold tracking-tight text-coal-50">
+          Vanta<span className="text-bone-300"> Solutions</span>
         </span>
       )}
     </span>

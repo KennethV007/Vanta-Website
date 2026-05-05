@@ -1,7 +1,7 @@
 export const BIO = {
   founderName: "Kenneth",
   company: "Vanta Solutions",
-  email: "koridor@vantafy.dev",
+  email: "sales@vantafy.dev",
   github: "https://github.com/KennethV007",
   linkedin: "https://linkedin.com/in/",
   shortIntro:

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { m } from "framer-motion";
 import { BIO } from "@/content/bio";
 
 const PROJECT_TYPES = [
@@ -11,6 +12,13 @@ const PROJECT_TYPES = [
   "Dashboard / internal tool",
   "Just exploring",
 ];
+
+const EASE = [0.22, 0.84, 0.34, 1] as const;
+
+const fieldVariants = {
+  hidden: { opacity: 0, y: 14 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
+};
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -35,13 +43,22 @@ export default function ContactForm() {
   }
 
   const inputCls =
-    "w-full rounded-lg bg-white/[0.03] hairline px-3.5 py-2.5 text-[15px] text-ink-50 placeholder:text-ink-400 focus:outline-none focus:border-accent-400 focus:bg-white/[0.05] transition-colors";
+    "w-full rounded-lg bg-white/[0.03] hairline px-3.5 py-2.5 text-[15px] text-coal-50 placeholder:text-coal-400 focus:outline-none focus:border-bone-300 focus:bg-white/[0.05] transition-colors";
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4">
-      <div className="grid gap-4 md:grid-cols-2">
+    <m.form
+      onSubmit={onSubmit}
+      className="space-y-4"
+      initial="hidden"
+      animate="show"
+      variants={{
+        hidden: {},
+        show: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
+      }}
+    >
+      <m.div variants={fieldVariants} className="grid gap-4 md:grid-cols-2">
         <label className="block">
-          <span className="block text-xs font-mono uppercase tracking-[0.18em] text-ink-400 mb-1.5">
+          <span className="block text-xs font-mono uppercase tracking-[0.18em] text-coal-400 mb-1.5">
             Name
           </span>
           <input
@@ -54,7 +71,7 @@ export default function ContactForm() {
           />
         </label>
         <label className="block">
-          <span className="block text-xs font-mono uppercase tracking-[0.18em] text-ink-400 mb-1.5">
+          <span className="block text-xs font-mono uppercase tracking-[0.18em] text-coal-400 mb-1.5">
             Email
           </span>
           <input
@@ -66,10 +83,10 @@ export default function ContactForm() {
             placeholder="you@company.com"
           />
         </label>
-      </div>
+      </m.div>
 
-      <label className="block">
-        <span className="block text-xs font-mono uppercase tracking-[0.18em] text-ink-400 mb-1.5">
+      <m.label variants={fieldVariants} className="block">
+        <span className="block text-xs font-mono uppercase tracking-[0.18em] text-coal-400 mb-1.5">
           Project type
         </span>
         <select
@@ -78,15 +95,15 @@ export default function ContactForm() {
           className={inputCls}
         >
           {PROJECT_TYPES.map((t) => (
-            <option key={t} value={t} className="bg-ink-900">
+            <option key={t} value={t} className="bg-coal-900">
               {t}
             </option>
           ))}
         </select>
-      </label>
+      </m.label>
 
-      <label className="block">
-        <span className="block text-xs font-mono uppercase tracking-[0.18em] text-ink-400 mb-1.5">
+      <m.label variants={fieldVariants} className="block">
+        <span className="block text-xs font-mono uppercase tracking-[0.18em] text-coal-400 mb-1.5">
           Message
         </span>
         <textarea
@@ -97,19 +114,24 @@ export default function ContactForm() {
           className={inputCls}
           placeholder="Tell me about what you're trying to build..."
         />
-      </label>
+      </m.label>
 
-      <button
-        type="submit"
-        className="inline-flex items-center justify-center rounded-full bg-accent-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_30px_-8px_rgba(110,85,255,0.7)] hover:bg-accent-400 transition-colors"
-      >
-        Send via email
-        <span aria-hidden className="ml-2">→</span>
-      </button>
-      <p className="text-xs text-ink-400">
-        This opens your email client with a draft to{" "}
-        <span className="text-ink-200">{BIO.email}</span>.
-      </p>
-    </form>
+      <m.div variants={fieldVariants} className="pt-2">
+        <m.button
+          type="submit"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: "spring", stiffness: 400, damping: 22 }}
+          className="inline-flex items-center justify-center rounded-full bg-bone-200 px-6 py-3 text-sm font-medium text-coal-950 shadow-[0_4px_30px_-12px_rgba(246,239,225,0.45)] hover:bg-bone-100 transition-colors"
+        >
+          Send via email
+          <span aria-hidden className="ml-2">→</span>
+        </m.button>
+        <p className="mt-3 text-xs text-coal-400">
+          This opens your email client with a draft to{" "}
+          <span className="text-coal-200">{BIO.email}</span>.
+        </p>
+      </m.div>
+    </m.form>
   );
 }

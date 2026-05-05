@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { Space_Grotesk, Sora } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/motion/MotionProvider";
+import PageTransition from "@/components/motion/PageTransition";
 import "./globals.css";
 
 const display = Sora({
@@ -49,10 +51,14 @@ type RootLayoutProps = Readonly<{
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="min-h-screen bg-ink-950 text-ink-50 antialiased">
-        <Nav />
-        <main>{children}</main>
-        <Footer />
+      <body className="min-h-screen bg-coal-950 text-coal-50 antialiased">
+        <MotionProvider>
+          <Nav />
+          <main>
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );
