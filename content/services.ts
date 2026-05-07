@@ -8,55 +8,55 @@ export type Service = {
 
 export const SERVICES: Service[] = [
   {
-    slug: "web-apps",
-    title: "Custom Web Applications",
-    blurb: "Full-stack dashboards, portals, and internal tools.",
-    description:
-      "Modern web apps built end to end — from schema design to authenticated UI. The kind of product where the dashboard is the product.",
-    deliverables: [
-      "Auth, billing, and role-aware access",
-      "Admin panels and internal tooling",
-      "Customer-facing portals and SaaS frontends",
-      "API design and database modeling",
-    ],
-  },
-  {
     slug: "ai-automation",
-    title: "AI & Automation Systems",
-    blurb: "LLM-powered workflows, agents, and document processing.",
+    title: "AI Agents & Automation Systems",
+    blurb: "Multi-agent pipelines, RAG memory, and LLM-powered workflows.",
     description:
-      "Production-ready AI features — not demos. Retrieval pipelines, agentic workflows, and document understanding wired into real business logic.",
+      "Production AI features — not demos. Multi-agent pipelines, RAG-backed memory architectures, and LLM workflows wired into real business logic. The same pattern behind Eastside's persistent companions and Koridor's founder workspace.",
     deliverables: [
-      "RAG pipelines with evaluation and citations",
-      "Multi-step agents that act on real systems",
+      "Multi-agent pipelines with planning, build, and QC stages",
+      "RAG memory systems with persistent, retrievable context",
       "Document ingestion and structured extraction",
-      "LLM cost and latency tuning",
+      "LLM cost, latency, and evaluation tuning",
     ],
   },
   {
     slug: "scraping-data",
-    title: "Data Scraping & Processing",
-    blurb: "Web scraping, PDF extraction, and structured pipelines.",
+    title: "Data Scraping & Aggregation",
+    blurb: "Multi-source scrapers and dashboards that turn days into minutes.",
     description:
-      "Turn messy public data into clean, queryable rows. Built to survive site changes and run unattended.",
+      "Turn messy public and municipal data into clean, queryable rows. Built to survive site changes and run unattended — the same pattern behind Foretrace's ~10-minute foreclosure aggregation.",
     deliverables: [
-      "Resilient browser-based scrapers",
-      "PDF and document extraction pipelines",
-      "Postgres / warehouse loading",
-      "Scheduled runs with monitoring and alerts",
+      "Resilient scrapers across multi-source portals",
+      "Cross-source record matching and normalization",
+      "Postgres / Obsidian / dashboard output layers",
+      "Scheduled runs with monitoring and alerting",
     ],
   },
   {
-    slug: "mobile-prototype",
-    title: "Mobile & Prototype Development",
-    blurb: "Flutter apps, hackathon MVPs, and proof-of-concept builds.",
+    slug: "web-apps",
+    title: "Custom Web Applications",
+    blurb: "Full-stack PERN / Next.js builds with payments, auth, and dashboards.",
     description:
-      "Rapid prototypes for founders and teams who need a working artifact in days, not quarters — without throwing the code away later.",
+      "Modern full-stack web apps built end to end — from schema design to authenticated UI. Stripe, OAuth, SEO, and admin dashboards. The same pattern behind the Wix → PERN migration at Orlando Korean Culture Center.",
     deliverables: [
-      "Flutter cross-platform apps",
-      "Investor / pitch demos that actually work",
-      "Hackathon-pace MVPs that survive into production",
-      "Technical validation for early-stage ideas",
+      "PERN / Next.js + Tailwind builds",
+      "Stripe payments and Google OAuth integration",
+      "Admin panels, customer portals, and internal tools",
+      "API design, database modeling, and SEO",
+    ],
+  },
+  {
+    slug: "dashboards",
+    title: "Dashboards & Internal Tooling",
+    blurb: "Interactive dashboards that replace slow legacy reports.",
+    description:
+      "Internal tooling that turns data into decisions. KoolReport / custom dashboards, optimized SQL pipelines, and visual analytics — the same pattern behind a 95% report-time reduction at Toptech Systems.",
+    deliverables: [
+      "Interactive dashboards replacing legacy binary reports",
+      "Query and pipeline optimization (Postgres / MariaDB / MySQL)",
+      "Visual analytics and decision-support views",
+      "Role-aware access and exports",
     ],
   },
 ];

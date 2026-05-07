@@ -11,10 +11,10 @@ import { getFeaturedProjects } from "@/content/projects";
 import { BIO } from "@/content/bio";
 
 const METRICS: { value: number | string; label: string; suffix?: string }[] = [
-  { value: 6, label: "Shipped projects", suffix: "+" },
-  { value: "AI-first", label: "Stack focus" },
+  { value: "3.92", label: "GPA — UCF CS" },
+  { value: "95%", label: "Report perf gain @ Toptech" },
+  { value: "BS→MS", label: "Accelerated track" },
   { value: "Solo", label: "End-to-end ownership" },
-  { value: "UCF CS", label: "Founder background" },
 ];
 
 export default function HomePage() {
@@ -110,17 +110,17 @@ export default function HomePage() {
             <div key={i} className="flex shrink-0 items-center gap-10 pr-10">
               <span>AI Agents</span>
               <span aria-hidden>•</span>
-              <span>Full-Stack</span>
+              <span>RAG Memory</span>
               <span aria-hidden>•</span>
               <span>Automation</span>
               <span aria-hidden>•</span>
               <span>Scraping</span>
               <span aria-hidden>•</span>
-              <span>Mobile</span>
+              <span>Full-Stack</span>
               <span aria-hidden>•</span>
               <span>Dashboards</span>
               <span aria-hidden>•</span>
-              <span>ML Research</span>
+              <span>Multi-Agent Systems</span>
               <span aria-hidden>•</span>
             </div>
           ))}
@@ -134,7 +134,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Featured Work"
               title="Selected projects."
-              lead="A sample of recent builds — AI products, dashboards, and senior design work."
+              lead="Recent builds — AI agent platforms, automation systems, and founder workspaces."
             />
             <Link
               href="/projects"
@@ -203,10 +203,11 @@ export default function HomePage() {
                 <span className="text-coal-300">End-to-end ownership.</span>
               </h2>
               <p className="mt-6 max-w-xl text-coal-300 leading-relaxed">
-                I&apos;m {BIO.founderName} — a CS student at UCF and the engineer
-                behind Vanta Solutions. I build AI agents, full-stack web apps,
-                and automation systems for founders, teams, and my own products.
-                JROTC Drill Commander background, software engineering internships,
+                I&apos;m {BIO.founderName} — an accelerated BS-to-MS Computer
+                Science student at UCF (3.92 GPA) and the engineer behind Vanta
+                Solutions. I build AI agents, RAG memory systems, and automation
+                pipelines for clients and in-house ventures. JROTC Drill Commander
+                background, internship experience across full-stack and analytics,
                 and a bias for shipping.
               </p>
               <Link

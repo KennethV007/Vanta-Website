@@ -85,11 +85,11 @@ export default function ContactPage() {
                 Best fits
               </p>
               <ul className="space-y-1.5 text-sm text-coal-300">
-                <li>— AI / LLM products</li>
-                <li>— Full-stack web apps</li>
-                <li>— Automation & scraping</li>
-                <li>— Mobile / Flutter prototypes</li>
-                <li>— Internal dashboards</li>
+                <li>— AI agents & RAG memory systems</li>
+                <li>— Multi-source scraping & aggregation</li>
+                <li>— Full-stack PERN / Next.js builds</li>
+                <li>— Internal dashboards & analytics</li>
+                <li>— Multi-agent founder workflows</li>
               </ul>
             </div>
           </StaggerItem>

@@ -5,11 +5,11 @@ import { m } from "framer-motion";
 import { BIO } from "@/content/bio";
 
 const PROJECT_TYPES = [
-  "AI / LLM product",
+  "AI agent / RAG product",
+  "Automation / scraping pipeline",
   "Full-stack web app",
-  "Automation / scraping",
-  "Mobile / Flutter",
   "Dashboard / internal tool",
+  "Multi-agent workflow",
   "Just exploring",
 ];
 

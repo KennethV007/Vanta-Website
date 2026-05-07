@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 const HIGHLIGHTS = [
-  "B.S. Computer Science — University of Central Florida",
-  "Software engineering internships across full-stack and AI/ML",
-  "Founder of Vanta Solutions — AI products, automation, full-stack",
-  "Senior design: Space Force CLAW (compliance AI assistant)",
-  "JROTC Drill Commander, national leadership finalist",
+  "Accelerated BS → MS Computer Science — UCF Burnett Honors College (3.92 GPA)",
+  "Founder & CTO of Vanta Solutions — AI agents, automation, full-stack",
+  "Software Dev Intern @ Toptech — 95% report-time reduction (KoolReport / PHP / SQL)",
+  "Frontend Dev Intern @ Orlando Korean Culture Center — Wix → PERN migration",
+  "JROTC Drill Commander — national leadership finalist",
 ];
 
 export default function ResumePage() {

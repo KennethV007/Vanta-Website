@@ -57,6 +57,65 @@ export default function AboutPage() {
       <section className="mx-auto max-w-3xl px-5 md:px-8 pt-20">
         <Reveal>
           <SectionHeading
+            eyebrow="Experience"
+            title="Where I've shipped."
+            lead="Founder work plus internships across full-stack and analytics."
+          />
+        </Reveal>
+        <StaggerGroup className="mt-8 space-y-4" stagger={0.07}>
+          {BIO.experience.map((e) => (
+            <StaggerItem key={`${e.company}-${e.role}`}>
+              <div className="rounded-xl hairline bg-white/[0.02] px-5 py-4">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 className="font-display text-lg font-semibold text-coal-50">
+                    {e.role} <span className="text-coal-400">— {e.company}</span>
+                  </h3>
+                  <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-coal-400">
+                    {e.period}
+                  </p>
+                </div>
+                <p className="mt-1 text-xs text-coal-400">{e.location}</p>
+                <p className="mt-3 text-sm text-coal-200 leading-relaxed">
+                  {e.summary}
+                </p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-5 md:px-8 pt-20">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Education"
+            title="UCF Burnett Honors College."
+            lead="Accelerated BS-to-MS Computer Science track."
+          />
+        </Reveal>
+        <Reveal>
+          <div className="mt-8 rounded-xl hairline bg-white/[0.02] px-5 py-5">
+            <h3 className="font-display text-lg font-semibold text-coal-50">
+              {BIO.education.degree}
+            </h3>
+            <p className="mt-1 text-coal-300 text-sm">{BIO.education.school}</p>
+            <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-coal-400">
+              {BIO.education.period} · GPA {BIO.education.gpa}
+            </p>
+            <ul className="mt-4 grid gap-1.5 text-sm text-coal-200 sm:grid-cols-2">
+              {BIO.education.honors.map((h) => (
+                <li key={h} className="flex gap-2">
+                  <span aria-hidden className="text-bone-300">▸</span>
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-5 md:px-8 pt-20">
+        <Reveal>
+          <SectionHeading
             eyebrow="Leadership Background"
             title="Built before I shipped."
             lead="The discipline side. Less about the title — more about how it shapes how I run projects."

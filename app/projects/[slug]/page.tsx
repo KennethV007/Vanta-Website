@@ -52,7 +52,8 @@ export default async function ProjectCaseStudy({
 
       <Reveal on="mount" delay={0.1}>
         <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-bone-300 mb-4">
-          {project.category} • {project.status}
+          {project.category} • {project.statusLabel ?? project.status}
+          {project.timeline ? ` • ${project.timeline}` : ""}
         </p>
       </Reveal>
 
